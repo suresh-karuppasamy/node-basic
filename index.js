@@ -1,13 +1,19 @@
 const notes = require('./notes');
 
-console.log(notes.sum(4,2));
+const yargs = require('yargs');
 
-let command = process.argv[2];
+const argv = yargs.argv;
+
+var command = argv._[0];
 
 if(command === 'list') {
-    console.log('list')
+    notes.allNotes();
 } else if(command === 'read') {
-    console.log('read')
+    notes.readNote(argv.title, argv.body);
+} else if(command === 'create') {
+    notes.createNote(argv.title, argv.body);
+} else if(command === 'remove') {
+    notes.removeNote(argv.title, argv.body);
 } else {
     console.log("Command Not found")
 }

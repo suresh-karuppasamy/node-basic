@@ -17,7 +17,9 @@
     "url": "https://github.com/sureshkk89/node-basic/issues"
   },
   "homepage": "https://github.com/sureshkk89/node-basic#readme",
-  "dependencies": {},
+  "dependencies": {
+    "yargs": "^15.3.1"
+  },
   "devDependencies": {
     "nodemon": "^2.0.3"
   }
