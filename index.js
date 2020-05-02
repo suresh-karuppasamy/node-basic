@@ -1,19 +1,12 @@
-const notes = require('./notes');
+const express = require('express');
+const app = express();
 
-const yargs = require('yargs');
+app.get('/', (req,res)=>{
+    res.send('Home');
+})
 
-const argv = yargs.argv;
+app.get('/about', (req,res)=> {
+    res.send('About')
+})
 
-var command = argv._[0];
-
-if(command === 'list') {
-    notes.allNotes();
-} else if(command === 'read') {
-    notes.readNote(argv.title, argv.body);
-} else if(command === 'create') {
-    notes.createNote(argv.title, argv.body);
-} else if(command === 'remove') {
-    notes.removeNote(argv.title, argv.body);
-} else {
-    console.log("Command Not found")
-}
+app.listen(3000);
