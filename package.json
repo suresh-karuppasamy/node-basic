@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sureshkk89/node-basic#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
